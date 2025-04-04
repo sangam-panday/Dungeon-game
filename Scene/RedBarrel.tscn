@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://gv6dkxp3ixv4"]
+
+[ext_resource type="Texture2D" uid="uid://btibqpjsppf67" path="res://freescifiplatform/png/Objects/Barrel (1).png" id="1_1oks5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2bhp"]
+size = Vector2(170.244, 230.154)
+
+[node name="Barrel(1)" type="Sprite2D"]
+position = Vector2(60.25, 48.5)
+scale = Vector2(0.370057, 0.382353)
+texture = ExtResource("1_1oks5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.675583, -1.3077)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_k2bhp")

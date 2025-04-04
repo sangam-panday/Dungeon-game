@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8sbhsrk0bdw3"]
+
+[ext_resource type="Texture2D" uid="uid://1c8hl22stnqv" path="res://freescifiplatform/png/Objects/Box.png" id="1_xcwnv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hdacx"]
+size = Vector2(258, 242)
+
+[node name="Box" type="Sprite2D"]
+position = Vector2(140, 94)
+texture = ExtResource("1_xcwnv")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_hdacx")

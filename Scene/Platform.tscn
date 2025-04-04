@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://yjv7agtencuw"]
+
+[ext_resource type="Texture2D" uid="uid://c5ys3pi2yt8f3" path="res://freescifiplatform/png/Tiles/Tile (12).png" id="1_87s1u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_87s1u"]
+size = Vector2(253.585, 126.476)
+
+[node name="Tile(12)" type="Sprite2D"]
+position = Vector2(284, 75)
+scale = Vector2(0.828125, 0.65625)
+texture = ExtResource("1_87s1u")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1.20755, -66.2857)
+shape = SubResource("RectangleShape2D_87s1u")
