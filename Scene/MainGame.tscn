@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://bmwlld10yxd0g"]
+[gd_scene load_steps=68 format=3 uid="uid://bmwlld10yxd0g"]
 
 [ext_resource type="PackedScene" uid="uid://brt1kynors65n" path="res://Scene/player.tscn" id="1_qop27"]
 [ext_resource type="Texture2D" uid="uid://k2nqolt2cucx" path="res://freescifiplatform/png/Tiles/Acid (1).png" id="2_bxip3"]
@@ -33,7 +33,8 @@
 [ext_resource type="PackedScene" uid="uid://qatcrfxguqsd" path="res://Scene/GreenBarrel.tscn" id="31_ekogx"]
 [ext_resource type="PackedScene" uid="uid://c8sbhsrk0bdw3" path="res://Scene/box.tscn" id="32_hxp4v"]
 [ext_resource type="PackedScene" uid="uid://yjv7agtencuw" path="res://Scene/Platform.tscn" id="33_ekogx"]
-[ext_resource type="PackedScene" uid="uid://mcpjy5empvgp" path="res://Scene/chest.tscn" id="34_hxp4v"]
+[ext_resource type="PackedScene" uid="uid://mcpjy5empvgp" path="res://Scene/Chest.tscn" id="34_hxp4v"]
+[ext_resource type="PackedScene" uid="uid://dsjcdsl5et3ut" path="res://Scene/monster_1.tscn" id="35_ohsqa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fdxrs"]
 texture = ExtResource("2_bxip3")
@@ -5903,6 +5904,21 @@ sources/25 = SubResource("TileSetAtlasSource_vn380")
 sources/26 = SubResource("TileSetAtlasSource_j31lk")
 sources/27 = SubResource("TileSetAtlasSource_qimps")
 
+[sub_resource type="Animation" id="Animation_hxp4v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(831, -698)]
+}
+
 [sub_resource type="Animation" id="Animation_ekogx"]
 resource_name = "move"
 length = 1.5
@@ -5920,21 +5936,6 @@ tracks/0/keys = {
 "values": [Vector2(831, -698), Vector2(1252, -699)]
 }
 
-[sub_resource type="Animation" id="Animation_hxp4v"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(831, -698)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ohsqa"]
 _data = {
 &"RESET": SubResource("Animation_hxp4v"),
@@ -5944,7 +5945,7 @@ _data = {
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_qop27")]
-position = Vector2(1782, -532)
+position = Vector2(-265, -834)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(22, 80)
@@ -5975,7 +5976,6 @@ position = Vector2(1936, -499)
 
 [node name="Barrel(2)3" parent="GreenBarrel" instance=ExtResource("31_ekogx")]
 position = Vector2(593, -818)
-scale = Vector2(0.471751, 0.445378)
 
 [node name="Box" type="Node" parent="."]
 
@@ -6001,5 +6001,10 @@ autoplay = "move"
 
 [node name="Chest" type="Node" parent="."]
 
-[node name="Chest" parent="Chest" instance=ExtResource("34_hxp4v")]
-position = Vector2(2079, -470)
+[node name="Area2D" parent="Chest" instance=ExtResource("34_hxp4v")]
+position = Vector2(2064, -509)
+
+[node name="Monster2" parent="." instance=ExtResource("35_ohsqa")]
+position = Vector2(16, -906)
+
+[node name="Monster1" type="Node" parent="."]
