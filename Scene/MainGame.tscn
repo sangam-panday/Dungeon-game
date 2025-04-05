@@ -5945,12 +5945,13 @@ _data = {
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_qop27")]
-position = Vector2(-265, -834)
+position = Vector2(-330, -857)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(22, 80)
 rotation = 3.14159
 scale = Vector2(8.72746, 37.8127)
+limit_bottom = 369
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_whqso")
@@ -6004,7 +6005,7 @@ autoplay = "move"
 [node name="Area2D" parent="Chest" instance=ExtResource("34_hxp4v")]
 position = Vector2(2064, -509)
 
-[node name="Monster2" parent="." instance=ExtResource("35_ohsqa")]
-position = Vector2(16, -906)
-
 [node name="Monster1" type="Node" parent="."]
+
+[node name="Monster2" parent="Monster1" instance=ExtResource("35_ohsqa")]
+position = Vector2(15, -790)

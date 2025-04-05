@@ -1,8 +1,50 @@
-[gd_scene load_steps=28 format=3 uid="uid://dsjcdsl5et3ut"]
+[gd_scene load_steps=40 format=3 uid="uid://dsjcdsl5et3ut"]
 
 [ext_resource type="Texture2D" uid="uid://7aofv7ofatny" path="res://Minotaur_1/Idle.png" id="1_c4pl5"]
 [ext_resource type="Script" uid="uid://b8y0caaqe3j7i" path="res://Script/Monster_1.gd" id="1_si1in"]
+[ext_resource type="Texture2D" uid="uid://nasq11u3ip7u" path="res://Minotaur_1/Attack.png" id="2_ic7is"]
 [ext_resource type="Texture2D" uid="uid://cg1fqavmb071p" path="res://Minotaur_1/Walk.png" id="2_orjik"]
+[ext_resource type="Texture2D" uid="uid://bnj4frgu0xyrt" path="res://Minotaur_1/Dead.png" id="3_f44fq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oc6vu"]
+atlas = ExtResource("2_ic7is")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ju3n"]
+atlas = ExtResource("2_ic7is")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46ek3"]
+atlas = ExtResource("2_ic7is")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2o3dt"]
+atlas = ExtResource("2_ic7is")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37fjp"]
+atlas = ExtResource("2_ic7is")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xi0xi"]
+atlas = ExtResource("3_f44fq")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgrs1"]
+atlas = ExtResource("3_f44fq")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_te6u2"]
+atlas = ExtResource("3_f44fq")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyf36"]
+atlas = ExtResource("3_f44fq")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4ems"]
+atlas = ExtResource("3_f44fq")
+region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_orjik"]
 atlas = ExtResource("1_c4pl5")
@@ -96,6 +138,46 @@ region = Rect2(1408, 0, 128, 128)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_oc6vu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ju3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46ek3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2o3dt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37fjp")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xi0xi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgrs1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_te6u2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyf36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4ems")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_orjik")
 }, {
 "duration": 1.0,
@@ -172,29 +254,35 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e422f"]
-radius = 21.0
+radius = 18.8235
 height = 82.0
 
 [node name="Monster1" type="Area2D"]
+position = Vector2(-1, -1)
 script = ExtResource("1_si1in")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(38, 36)
+position = Vector2(44, 860)
 scale = Vector2(1.59375, 1.5625)
 sprite_frames = SubResource("SpriteFrames_atqxf")
-animation = &"Walk"
+animation = &"Death"
 autoplay = "Idle"
-frame_progress = 0.562561
+frame_progress = 0.882321
+offset = Vector2(-20, -604)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
-position = Vector2(-6, 23)
+position = Vector2(-27.6078, -580.48)
 shape = SubResource("CapsuleShape2D_e422f")
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
-position = Vector2(32, 65)
+position = Vector2(2, -44)
 scale = Vector2(1.59375, 1.5625)
 target_position = Vector2(342.588, 0)
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
-position = Vector2(33, 66)
+position = Vector2(-1, -45)
 target_position = Vector2(-572, 0)
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

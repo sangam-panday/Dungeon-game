@@ -1,17 +1,27 @@
-[gd_scene load_steps=62 format=3 uid="uid://brt1kynors65n"]
+[gd_scene load_steps=103 format=3 uid="uid://brt1kynors65n"]
 
 [ext_resource type="Script" uid="uid://cqrl8ddpp6i54" path="res://Script/player.gd" id="1_c68nv"]
 [ext_resource type="Texture2D" uid="uid://cpxj6nifbbdca" path="res://freeknight/png/Idle (1).png" id="1_ij4jb"]
+[ext_resource type="Texture2D" uid="uid://dypto703jdei4" path="res://freeknight/png/Attack (1).png" id="2_71nu8"]
 [ext_resource type="Texture2D" uid="uid://br3djks2q328k" path="res://freeknight/png/Idle (2).png" id="2_c68nv"]
 [ext_resource type="Texture2D" uid="uid://dl1vivnq8u14f" path="res://freeknight/png/Idle (3).png" id="3_c31lq"]
+[ext_resource type="Texture2D" uid="uid://dvvn8ldq58ulj" path="res://freeknight/png/Attack (2).png" id="3_dfe5c"]
 [ext_resource type="Texture2D" uid="uid://c41chnmsc2uwp" path="res://freeknight/png/Idle (4).png" id="4_2dof7"]
+[ext_resource type="Texture2D" uid="uid://bo0dfbr183w6c" path="res://freeknight/png/Attack (3).png" id="4_8wn1n"]
 [ext_resource type="Texture2D" uid="uid://cqfjuawq47xru" path="res://freeknight/png/Idle (6).png" id="5_4ao7i"]
+[ext_resource type="Texture2D" uid="uid://c7lotgmvo7cy1" path="res://freeknight/png/Attack (4).png" id="5_fm374"]
 [ext_resource type="Texture2D" uid="uid://cl03dv0lupom" path="res://freeknight/png/Idle (7).png" id="6_1sypm"]
+[ext_resource type="Texture2D" uid="uid://bn7p34wjmmgth" path="res://freeknight/png/Attack (5).png" id="6_btgjo"]
 [ext_resource type="Texture2D" uid="uid://bx56sruf6vueh" path="res://freeknight/png/Idle (8).png" id="7_fn0wv"]
+[ext_resource type="Texture2D" uid="uid://batotergt41nl" path="res://freeknight/png/Attack (6).png" id="7_j4me7"]
 [ext_resource type="Texture2D" uid="uid://c2xam5404enow" path="res://freeknight/png/Idle (9).png" id="8_eqmt2"]
+[ext_resource type="Texture2D" uid="uid://dh5r1fsd74ui0" path="res://freeknight/png/Attack (7).png" id="8_m38ty"]
 [ext_resource type="Texture2D" uid="uid://dr20vmyxrnx5b" path="res://freeknight/png/Idle (10).png" id="9_c40dt"]
+[ext_resource type="Texture2D" uid="uid://ditambatqy0bc" path="res://freeknight/png/Attack (8).png" id="9_q3k0r"]
+[ext_resource type="Texture2D" uid="uid://ceu1lpn86usg" path="res://freeknight/png/Attack (9).png" id="10_enslk"]
 [ext_resource type="Texture2D" uid="uid://x2c376t5dls5" path="res://freeknight/png/Walk (1).png" id="11_7d6xm"]
 [ext_resource type="Texture2D" uid="uid://bgu415utblt5i" path="res://freeknight/png/Jump (1).png" id="11_b881n"]
+[ext_resource type="Texture2D" uid="uid://dtdhxmk37107h" path="res://freeknight/png/Attack (10).png" id="11_tmdkp"]
 [ext_resource type="Texture2D" uid="uid://chd08w6mo8ffc" path="res://freeknight/png/Jump (2).png" id="12_2sr8w"]
 [ext_resource type="Texture2D" uid="uid://jcus7uufmmep" path="res://freeknight/png/Walk (3).png" id="13_1vqkc"]
 [ext_resource type="Texture2D" uid="uid://br54cw5h0gh6t" path="res://freeknight/png/Jump (3).png" id="13_2gnqs"]
@@ -29,6 +39,56 @@
 [ext_resource type="Texture2D" uid="uid://dnmrevmsj1dy8" path="res://freeknight/png/Walk (9).png" id="19_6xvy4"]
 [ext_resource type="Texture2D" uid="uid://dwuii2t7cf8ao" path="res://freeknight/png/Walk (10).png" id="20_b881n"]
 [ext_resource type="Texture2D" uid="uid://dwspn13cxf2d1" path="res://freeknight/png/Jump (10).png" id="20_bk8bd"]
+[ext_resource type="Texture2D" uid="uid://box2w8rmk6f1x" path="res://freeknight/png/JumpAttack (1).png" id="31_gklq8"]
+[ext_resource type="Texture2D" uid="uid://ddcenf84qxoak" path="res://freeknight/png/JumpAttack (2).png" id="32_nohji"]
+[ext_resource type="Texture2D" uid="uid://l4nfbip5t1gk" path="res://freeknight/png/JumpAttack (3).png" id="33_xmvmh"]
+[ext_resource type="Texture2D" uid="uid://cocdr8nhtb53o" path="res://freeknight/png/JumpAttack (4).png" id="34_e740p"]
+[ext_resource type="Texture2D" uid="uid://brtbh28uddcbc" path="res://freeknight/png/JumpAttack (5).png" id="35_xsqt2"]
+[ext_resource type="Texture2D" uid="uid://t2cnu2887f35" path="res://freeknight/png/JumpAttack (6).png" id="36_ti1um"]
+[ext_resource type="Texture2D" uid="uid://dnsva1e0mewms" path="res://freeknight/png/JumpAttack (7).png" id="37_by05o"]
+[ext_resource type="Texture2D" uid="uid://gj0gnohtu6f8" path="res://freeknight/png/JumpAttack (8).png" id="38_obpbn"]
+[ext_resource type="Texture2D" uid="uid://cwfnxtlg8c4p5" path="res://freeknight/png/JumpAttack (9).png" id="39_vwcqk"]
+[ext_resource type="Texture2D" uid="uid://dhd5koggdp761" path="res://freeknight/png/JumpAttack (10).png" id="40_u1nyk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nohji"]
+atlas = ExtResource("2_71nu8")
+region = Rect2(0, 0, 587, 707)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmvmh"]
+atlas = ExtResource("3_dfe5c")
+region = Rect2(0, 0, 587, 707)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e740p"]
+atlas = ExtResource("4_8wn1n")
+region = Rect2(0, 0, 587, 707)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsqt2"]
+atlas = ExtResource("5_fm374")
+region = Rect2(0, 0, 587, 707)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ti1um"]
+atlas = ExtResource("6_btgjo")
+region = Rect2(0, 0, 587, 707)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_by05o"]
+atlas = ExtResource("7_j4me7")
+region = Rect2(0, 0, 587, 707)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obpbn"]
+atlas = ExtResource("8_m38ty")
+region = Rect2(0, 0, 587, 707)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwcqk"]
+atlas = ExtResource("9_q3k0r")
+region = Rect2(0, 0, 587, 707)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1nyk"]
+atlas = ExtResource("10_enslk")
+region = Rect2(0, 0, 587, 707)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fin3p"]
+atlas = ExtResource("11_tmdkp")
+region = Rect2(0, 0, 587, 707)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lgjog"]
 atlas = ExtResource("1_ij4jb")
@@ -110,6 +170,46 @@ region = Rect2(0, 0, 587, 707)
 atlas = ExtResource("20_bk8bd")
 region = Rect2(0, 0, 587, 707)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0iya"]
+atlas = ExtResource("31_gklq8")
+region = Rect2(0, 0, 587, 707)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8fg5"]
+atlas = ExtResource("32_nohji")
+region = Rect2(0, 0, 587, 707)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byrg0"]
+atlas = ExtResource("33_xmvmh")
+region = Rect2(0, 0, 587, 707)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pq4u3"]
+atlas = ExtResource("34_e740p")
+region = Rect2(0, 0, 587, 707)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlio7"]
+atlas = ExtResource("35_xsqt2")
+region = Rect2(0, 0, 587, 707)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ko8v"]
+atlas = ExtResource("36_ti1um")
+region = Rect2(0, 0, 587, 707)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijcoc"]
+atlas = ExtResource("37_by05o")
+region = Rect2(0, 0, 587, 707)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5oeka"]
+atlas = ExtResource("38_obpbn")
+region = Rect2(0, 0, 587, 707)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4rin"]
+atlas = ExtResource("39_vwcqk")
+region = Rect2(0, 0, 587, 707)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_buhf8"]
+atlas = ExtResource("40_u1nyk")
+region = Rect2(0, 0, 587, 707)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_2gnqs"]
 atlas = ExtResource("11_7d6xm")
 region = Rect2(0, 0, 587, 707)
@@ -152,6 +252,41 @@ region = Rect2(0, 0, 587, 707)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6xvy4"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nohji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xmvmh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e740p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsqt2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ti1um")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_by05o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obpbn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwcqk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1nyk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fin3p")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lgjog")
@@ -224,6 +359,41 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_p0iya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8fg5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byrg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pq4u3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlio7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ko8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ijcoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5oeka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4rin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_buhf8")
+}],
+"loop": true,
+"name": &"JumpAttack",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_2gnqs")
 }, {
 "duration": 1.0,
@@ -262,6 +432,9 @@ animations = [{
 radius = 23.0
 height = 94.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0iya"]
+size = Vector2(33, 5.05952)
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_c68nv")
 
@@ -269,10 +442,23 @@ script = ExtResource("1_c68nv")
 z_index = 6
 scale = Vector2(0.176337, 0.181691)
 sprite_frames = SubResource("SpriteFrames_6xvy4")
-animation = &"Jump"
-autoplay = "Jump"
-frame_progress = 0.787687
+animation = &"JumpAttack"
+autoplay = "Idle"
+frame_progress = 0.702715
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 5)
 shape = SubResource("CapsuleShape2D_b881n")
+
+[node name="AttackArea" type="Area2D" parent="."]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(19, 34)
+rotation = -0.289414
+shape = SubResource("RectangleShape2D_p0iya")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.66
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
